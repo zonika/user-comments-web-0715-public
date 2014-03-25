@@ -1,7 +1,6 @@
 ---
-tags: jquery
+tags: jquery, WIP
 languages: js
-WIP
 ---
 
 # User Comments
