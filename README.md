@@ -1,6 +1,7 @@
 ---
 tags: jquery, WIP
 languages: js
+  resources: 1
 ---
 
 # User Comments
@@ -24,3 +25,6 @@ recent input.
 5. Validate that a comment was written
 7. Print the new comment with the commenters name and email below the existing
 comment.
+
+## Resources
+* [jQuery in Action](http://books.flatironschool.com/books/44) - [Chapter 4, Section 2](http://books.flatironschool.com/books/44), page 140
