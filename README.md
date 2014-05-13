@@ -1,6 +1,6 @@
 ---
-tags: jquery, WIP
-languages: js
+  tags: jquery, WIP
+  languages: js
   resources: 1
 ---
 
