@@ -28,7 +28,7 @@ $(document).ready(function(){
           $("#show_comment").click();
         }
         catch(err){
-          // this prevents `unexpected illegal token error from being thrown
+          // this prevents `unexpected illegal token` error from being thrown
           // and breaking the test
         }
       });
@@ -56,7 +56,7 @@ $(document).ready(function(){
         $("#show_comment").click();
       }
       catch(err){
-        // this prevents `unexpected illegal token error from being thrown
+        // this prevents `unexpected illegal token` error from being thrown
         // and breaking the test
       }
       $("#com_name").text("taco");
@@ -65,7 +65,7 @@ $(document).ready(function(){
       $("input[type='submit']").last().click();
       // this allows the program to wait for any animation to finish
       for (var i = 0; i < 1; i++){return i}
-      expect($(".newcomment").length).toBe(2)
+      expect($(".newcomment").length).toBe(2);
     });
 
   });
