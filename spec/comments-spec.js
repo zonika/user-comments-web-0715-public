@@ -53,12 +53,15 @@ describe('Validating User Input', function() {
       });
 
       it('#emailValidator should display the email error with an invalid email', function() {
+        $('#comment-name').text('taco');
         $('#com-email').text('email');
         $('input[type="submit"]').last().click();
         expect($('#com-email-error').css('display')).not.toBe('none');
       });
 
       it('#commentValidator should display the comment error when no comment is given', function() {
+        $('#comment-name').text('taco');
+        $('#com-email').text('taco@email.com');   
         $('input[type="submit"]').last().click();
         expect($('#comment-error').css('display')).not.toBe('none');
       });
