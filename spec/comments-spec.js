@@ -19,7 +19,7 @@ describe('Validating User Input', function() {
   it('#addCommentListener should display the form when you click add comment', function() {
     hideForm();
     addCommentListener();
-    $('.show-comment-form').click();
+    $('#show-comment-form').click();
     expect($('form#add-comment').css('display')).not.toBe('none');
   });
 
