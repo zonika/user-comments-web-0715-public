@@ -1,0 +1,8 @@
+# A list of javascript files required for the project, in dependency order
+javascripts:
+  files:
+    - lib/comments.js
+  specs:
+    - lib/jquery-2.1.1.min.js
+    - spec/jasmine-jquery.js
+    - spec/comments-spec.js
