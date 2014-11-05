@@ -1,6 +1,6 @@
 describe('Validating User Input', function() {
   beforeEach(function() {
-    setFixtures('<section id="comments"><h1>User Comments</h1><div id="posts"><div class="newcomment"><span class="name">Lisa Gould</span><span class="email">lisa.gould7684@ymail.com</span><span class="date">09/03/2012</span><p class="comment">Great reading! Thank you Econ News... I would like to see more articles from Chef Boullion. I\'m enjoying the keylime pie recipe with friends.</p></div></div><button id="show-comment" onclick="#add-comment">add comment</button><form id="add-comment" action="#" method="post"><label for="comment-name">Name</label><br><input type="text" id="comment-name" name="comment-name"><br><span id="com-name-error">Name must be more than 3 characters!</span><br><label for="com-email">Email</label><br><input type="text" id="com-email" name="com-email"><br><span id="com-email-error">Must be a valid email!</span><br><label for="comment-name">Comment</label><br><textarea id="comment" name="comment" rows="5"></textarea><br><span id="comment-error">Comment text required!</span><br><input type="submit" value="submit"><input id="cancel" type="reset" value="cancel"></form></section>');
+    setFixtures('<section id="comments"><h1>User Comments</h1><div id="posts"><div class="newcomment"><span class="name">Lisa Gould</span><span class="email">lisa.gould7684@ymail.com</span><span class="date">09/03/2012</span><p class="comment">Great reading! Thank you Econ News... I would like to see more articles from Chef Boullion. I\'m enjoying the keylime pie recipe with friends.</p></div></div><button id="show-comment-form" onclick="#add-comment">add comment</button><form id="add-comment" action="#" method="post"><label for="comment-name">Name</label><br><input type="text" id="comment-name" name="comment-name"><br><span id="com-name-error">Name must be more than 3 characters!</span><br><label for="com-email">Email</label><br><input type="text" id="com-email" name="com-email"><br><span id="com-email-error">Must be a valid email!</span><br><label for="comment-name">Comment</label><br><textarea id="comment" name="comment" rows="5"></textarea><br><span id="comment-error">Comment text required!</span><br><input type="submit" value="submit"><input id="cancel" type="reset" value="cancel"></form></section>');
     $('form').submit(function(e){ e.preventDefault(); });
   });
 
@@ -17,11 +17,15 @@ describe('Validating User Input', function() {
   });
 
   it('#addCommentListener should display the form when you click add comment', function() {
+    hideForm();
     addCommentListener();
+    $('.show-comment-form').click();
     expect($('form#add-comment').css('display')).not.toBe('none');
   });
 
   it('#cancelListener should hide form when cancel is pressed', function() {
+    hideForm();
+    addCommentListener();
     cancelListener();
     $('#cancel').click();
     expect($('form#add-comment').css('display')).toBe('none');
