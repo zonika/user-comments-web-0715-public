@@ -48,30 +48,30 @@ describe('Validating User Input', function() {
 
     describe('Displays errors with invalid inputs', function() {
       it('#nameValidator should display the name error with a name less than 3 characters', function() {
-        $('#comment-name').text('t');
+        $('#comment-name').val('t');
         $('input[type="submit"]').last().click();
         expect($('#com-name-error').css('display')).not.toBe('none');
       });
 
       it('#emailValidator should display the email error with an invalid email', function() {
-        $('#comment-name').text('taco');
-        $('#com-email').text('email');
+        $('#comment-name').val('taco');
+        $('#com-email').val('email');
         $('input[type="submit"]').last().click();
         expect($('#com-email-error').css('display')).not.toBe('none');
       });
 
       it('#commentValidator should display the comment error when no comment is given', function() {
-        $('#comment-name').text('taco');
-        $('#com-email').text('taco@email.com');   
+        $('#comment-name').val('taco');
+        $('#com-email').val('taco@email.com');   
         $('input[type="submit"]').last().click();
         expect($('#comment-error').css('display')).not.toBe('none');
       });
     });
 
     it('#addComment should display the user post when properly submitted', function() {
-      $('#comment-name').text('taco');
-      $('#com-email').text('taco@email.com');
-      $('#com-email').text('I\'m trizzolllllllin!');
+      $('#comment-name').val('el taco');
+      $('#com-email').val('taco@email.com');
+      $('#comment').val('I\'m trizzolllllllin!');
       $('input[type="submit"]').last().click();
       expect($('.newcomment').length).toBe(2);
     });
