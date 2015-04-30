@@ -30,5 +30,3 @@ comment.
 Here's an email regex test to help
 `/^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+@[a-zA-Z0-9_-]+.([a-z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)$/`
 
-## Resources
-* [jQuery in Action](http://books.flatironschool.com/books/44) - [Chapter 4, Section 2](http://books.flatironschool.com/books/44), page 140
