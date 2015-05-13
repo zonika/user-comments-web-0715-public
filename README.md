@@ -18,14 +18,12 @@ You'll see an amazing website for ECON News Corp.
 If you go to the bottom of the page, you'll see a comments form. You'll need to
 do several things to the form.
 2. The form should be hidden until a visitor clicks on the "add comment" button.
-3. Use an object to store the name, email, current date, and comment for the most
-recent input.
-4. Validate the Name field with a requirement that names be more than 3 characters
-5. Validate that the email is formatted properly
-6. Validate that a comment was written
-7. Print the new comment with the commenters name and email below the existing
+3. Validate the Name field with a requirement that names be more than 3 characters
+4. Validate that the email is formatted properly
+5. Validate that a comment was written
+6. Print the new comment with the commenters name and email below the existing
 comment.
-8. Add all your validations and js in `js/comments.js` and don't forget to run `open SpecRunner.html` for guidance.
+7. Add all your validations and js in `js/comments.js`.
 
 Here's an email regex test to help
 `/^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+@[a-zA-Z0-9_-]+.([a-z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)$/`
