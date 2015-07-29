@@ -1,8 +1,4 @@
----
-  tags: jquery
-  languages: JavaScript, js
-  resources: 1
----
+
 
 # User Comments
 
